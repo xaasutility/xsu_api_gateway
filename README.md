@@ -1,14 +1,10 @@
 Configuration
 =============
 
-1. Create a database in your preferred DB of choice.
-2. Use the db name for the path for the DB host. example: `mysql://your_user:your_pass@your_host/your_database_name`
-3. Add this to your `.env` file.
+API GATEWAY for various microservices in XSU
 
-```
-DB_URL=mysql://your_user:your_pass@your_host/your_database_name
-ADMIN_KEY=banana
-```
+( Initialized with pricing microservice )
+
 
 Run `npm start` to start the server.
 
@@ -29,4 +25,4 @@ Refer to the `test/rest.js` example to know how to authenticate with the server.
 
 #### License
 
-XSU Backend
+XSU API GATEWAY
