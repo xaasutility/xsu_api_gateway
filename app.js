@@ -11,6 +11,7 @@ app.use(logger('dev'));
 
 app.use('/', require('./routes/index')(app));
 app.use('/pricing', require('./routes/pricing')(app));
+app.use('/user', require('./routes/user')(app));
 
 app.listen(port, function() {
     console.log('Server started... http://localhost:%d', port);
