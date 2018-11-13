@@ -19,6 +19,19 @@ module.exports = function(app) {
                 }
                 res.json(JSON.parse(body));
             });
+        }).post(function(req, res) {
+            const uri = process.env.PRICING_SERVICE + '/api/softwares';
+
+            Request.post({
+                'headers': { 'content-type': 'application/json' },
+                'url': uri,
+                'body': JSON.stringify(req.body)
+            }, (error, response, body) => {
+                if(error) {
+                    return console.dir(error);
+                }
+                res.json(JSON.parse(body));
+            });
         });
 
     router.route('/services')
@@ -26,6 +39,19 @@ module.exports = function(app) {
             const uri = process.env.PRICING_SERVICE + '/api/services'
 
             Request.get(uri, (error, response, body) => {
+                if(error) {
+                    return console.dir(error);
+                }
+                res.json(JSON.parse(body));
+            });
+        }).post(function(req, res) {
+            const uri = process.env.PRICING_SERVICE + '/api/services';
+
+            Request.post({
+                'headers': { 'content-type': 'application/json' },
+                'url': uri,
+                'body': JSON.stringify(req.body)
+            }, (error, response, body) => {
                 if(error) {
                     return console.dir(error);
                 }
